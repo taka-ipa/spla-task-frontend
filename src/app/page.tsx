@@ -9,8 +9,7 @@ type Post = {
 };
 
 export default function Home() {
-  const [posts, setPosts] = useState<Post[]>([]);
-
+  const [posts, setPosts] = useState<Post[]>([]); // 投稿データの状態を管理
   useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/posts')
       .then((res) => {
